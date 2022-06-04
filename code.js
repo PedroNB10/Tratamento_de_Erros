@@ -16,7 +16,7 @@ function CliqueBotaoArquivo() {
     try { //testa esse trecho de codigo, senáo der certo 
 
         if ((arquivo.files[0]) == null) {
-            throw "/* ¯\_(ツ)_/¯ */ " //Essa informação vai para o parâmetro do catch, É uma forma de tratar um erro conhecido
+            throw "Arquivo não encontrado!" //Essa informação vai para o parâmetro do catch, É uma forma de tratar um erro conhecido
         }
 
         fr.readAsText(arquivo.files[0]); // se quebrar essa linha de codigo ele não vai executar o que está depois dele
@@ -54,15 +54,6 @@ function CliqueBotaoArquivo() {
 
 function CliqueBotaoNumber(){
     
-    // try{
-    //     valor_digitado = document.getElementById("inputnumber")
-    // }
-
-    // catch(error){
-    //     alert(error)
-    // }
-
-   
 
 try {
     
