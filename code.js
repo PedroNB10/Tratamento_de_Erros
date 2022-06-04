@@ -1,10 +1,13 @@
-const inputButton = document.getElementById("inputfilebutton");
-inputButton.addEventListener("click", clickButton);
+const inputFileButton = document.getElementById("inputfilebutton");
+inputFileButton.addEventListener("click", CliqueBotaoArquivo);
 
-function clickButton() {
+const inputNumberButton = document.getElementById("inputnumberbutton");
+inputNumberButton.addEventListener("click", CliqueBotaoNumber);
+
+function CliqueBotaoArquivo() {
     arquivo = document.getElementById("inputfile");
 
-    console.log(arquivo.files)
+   
     var fr = new FileReader();
     var info 
 
@@ -49,4 +52,40 @@ function clickButton() {
 
 }
 
+function CliqueBotaoNumber(){
+    
+    // try{
+    //     valor_digitado = document.getElementById("inputnumber")
+    // }
+
+    // catch(error){
+    //     alert(error)
+    // }
+
+   
+
+try {
+    
+    valor_digitado = document.getElementById("inputnumber")
+    valor_verificacao =  Number(valor_digitado.value)
+
+    if(valor_digitado.value == "") throw 'Informe um valor!'
+    else if (valor_verificacao <= 5 || valor_verificacao >= 10) throw 'Informe um valor maior que 5 e menor que 10'
+
+}
+
+catch(error){
+   
+    document.getElementById("output-number").innerHTML = `Erro: ${error}`
+    console.log(error)
+    alert(`Erro: ${error}`)
+}
+
+finally {
+   
+    document.getElementById("output-number").innerHTML = `O valor digitado foi ${valor_digitado.value}`
+}
+
+
+}
 
