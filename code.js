@@ -54,7 +54,7 @@ function CliqueBotaoArquivo() {
 
 function CliqueBotaoNumber(){
     
-
+    document.getElementById("output-number").innerHTML = ``
 try {
     
     valor_digitado = document.getElementById("inputnumber")
@@ -69,12 +69,12 @@ catch(error){
    
     document.getElementById("output-number").innerHTML = `Erro: ${error}`
     console.log(error)
-    alert(`Erro: ${error}`)
+    
 }
 
 finally {
    
-    document.getElementById("output-number").innerHTML = `O valor digitado foi ${valor_digitado.value}`
+    alert(`O valor digitado foi ${valor_digitado.value}`)
 }
 
 
