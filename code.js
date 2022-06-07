@@ -68,7 +68,7 @@ try {
 catch(error){
    
     document.getElementById("output-number").innerHTML = `Erro: ${error}`
-    console.log(error)
+    console.log(`Erro: ${error}`)
     
 }
 
